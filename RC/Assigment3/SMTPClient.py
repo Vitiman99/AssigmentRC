@@ -52,7 +52,7 @@ if recv4[:3] != '334':
    print('334 reply not received from server.')
 
 # Send username and print server response.
-username = 'manumartinez0309@gmail.com'
+username = 'victormanuelsiremartinez@gmail.com'
 usernameCommand = base64.b64encode(username.encode()).decode() + '\r\n'
 clientSocket.send(usernameCommand.encode())
 recv5 = clientSocket.recv(1024).decode()
@@ -61,7 +61,7 @@ if recv5[:3] != '334':
    print('334 reply not received from server.')
 
 # Send password and print server response.
-password = 'ojhn kqsh pzek tgqn' # Replace with your app password
+password = 'viza fyes bnur qmyf' # Replace with your app password
 passwordCommand = base64.b64encode(password.encode()).decode() + '\r\n'
 clientSocket.send(passwordCommand.encode())
 recv6 = clientSocket.recv(1024).decode()
@@ -70,7 +70,7 @@ if recv6[:3] != '235':
    print('235 reply not received from server.')
 
 # Send MAIL FROM command and print server response.
-mailFromCommand = 'MAIL FROM: <manumartinez0309@gmail.com>\r\n'
+mailFromCommand = 'MAIL FROM: <victormanuelsiremartinez@gmail.com>\r\n'
 clientSocket.send(mailFromCommand.encode())
 recv7 = clientSocket.recv(1024).decode()
 print(recv7)
@@ -78,7 +78,7 @@ if recv7[:3] != '250':
    print('250 reply not received from server.')
 
 # Send RCPT TO command and print server response.
-rcptToCommand = 'RCPT TO: <victormsire@gmail.com>\r\n'
+rcptToCommand = 'RCPT TO: <loreconsu48@gmail.com>\r\n'
 clientSocket.send(rcptToCommand.encode())
 recv8 = clientSocket.recv(1024).decode()
 print(recv8)
